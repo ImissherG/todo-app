@@ -141,9 +141,9 @@ body {
 @media (max-width: 768px) {
   /* 弹窗占满屏幕，更适合手机操作 */
   .modal {
-    width: 100% !important;
-    height: 100vh !important;
-    border-radius: 0 !important;
+    width: 100% ;
+    height: 100% ;
+    border-radius: 0 ;
   }
   /* 图片在手机上显示为横幅，不占满左侧 */
   .modal-left {
