@@ -1,0 +1,138 @@
+/* -------------------------- 全局背景（替换成照片） -------------------------- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* 核心：把渐变背景换成自定义照片 */
+    background: url('./【哲风壁纸】发丝-手绘少女.png') center/cover no-repeat fixed;
+    /* 可选：加一层半透明遮罩，让文字更清晰 */
+    background-color: rgba(255,255,255,0.2);
+    background-blend-mode: overlay;
+}
+
+/* -------------------------- 左侧图片面板 样式 -------------------------- */
+.left-panel {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.bg-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* -------------------------- 全局通用样式 -------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft Yahei', sans-serif;
+}
+
+/* -------------------------- 卡片容器 核心样式 -------------------------- */
+.container {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* 可选：给卡片加轻微透明，透出背景照片 */
+    opacity: 0.95;
+}
+
+/* -------------------------- 右侧内容面板 样式 -------------------------- */
+.right-panel {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(180deg, #f8f4ff, #f0f9ff);
+    position: relative;
+}
+
+.right-panel h1 {
+    color: #886ce4;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.right-panel p {
+    color: #666;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* -------------------------- 按钮样式 -------------------------- */
+.action-btn {
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #b3a1f7, #8fd3f4);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+    color: #886ce4;
+    background: #f8f4ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.close-btn:hover {
+    background: #b3a1f7;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* -------------------------- 文字渐入动画 -------------------------- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

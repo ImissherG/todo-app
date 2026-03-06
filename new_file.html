@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咖啡</title>
+    <link rel="stylesheet" href="./new_file.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧图片面板 -->
+        <div class="left-panel">
+            <img src="./Ios-侧脸-冬日.png" alt="左侧面板图" class="bg-img">
+        </div>
+        <!-- 右侧内容面板 -->
+        <div class="right-panel">
+            <div class="close-btn" onclick="closeWithAnimate()">×</div>
+            <h1 class="fade-in">欢迎光临</h1>
+            <p class="fade-in delay-200">这是一个动漫风格的单页界面<br>你可以在这里放置任何内容</p>
+            <a href="https://www.baidu.com" target="_blank">
+                <button class="action-btn fade-in delay-400">开始探索</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function closeWithAnimate() {
+            let card = document.querySelector('.container');
+            card.style.transition = 'all 0.4s ease-out';
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                window.close();
+            }, 500);
+        }
+    </script>
+</body>
+</html>
